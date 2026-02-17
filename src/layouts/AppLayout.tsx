@@ -29,9 +29,7 @@ export default function AppLayout() {
                 <Logo />
               </Link>
             </div>
-            <NavMenu 
-            name={data.name}
-            />
+            <NavMenu name={data.name} />
           </div>
         </header>
         <section className="mt-8 md:mt-10 px-4 md:px-6 lg:px-10">

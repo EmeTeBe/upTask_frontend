@@ -43,7 +43,9 @@ export default function ProjectTeamView() {
   if (data)
     return (
       <div className="max-w-7xl mx-auto px-4 md:px-0">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">Administra el Equipo</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
+          Administra el Equipo
+        </h1>
         <p className="text-base sm:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Administra los colaboradores de este proyecto para formar el equipo de
           trabajo.
@@ -64,7 +66,9 @@ export default function ProjectTeamView() {
           </Link>
         </nav>
 
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mt-6 md:mt-8">Miembros del Proyecto</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mt-6 md:mt-8">
+          Miembros del Proyecto
+        </h2>
         {data.length ? (
           <ul
             role="list"
@@ -80,7 +84,9 @@ export default function ProjectTeamView() {
                     <p className="text-gray-600 cursor-pointer hover:underline text-lg sm:text-2xl lg:text-3xl font-bold break-words">
                       {member.name}
                     </p>
-                    <p className="text-xs md:text-sm text-gray-400 mt-2 break-words">{member.email}</p>
+                    <p className="text-xs md:text-sm text-gray-400 mt-2 break-words">
+                      {member.email}
+                    </p>
                   </div>
                 </div>
                 <div className="flex shrink-0 items-center justify-end gap-x-3 md:gap-x-6">

@@ -16,7 +16,10 @@ export default function AddMemberForm({
       {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
 
       <div className="flex flex-col gap-2">
-        <label className="font-normal text-base md:text-lg lg:text-2xl text-slate-800" htmlFor="name">
+        <label
+          className="font-normal text-base md:text-lg lg:text-2xl text-slate-800"
+          htmlFor="name"
+        >
           E-mail del usuario
         </label>
         <input

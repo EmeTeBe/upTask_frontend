@@ -42,7 +42,9 @@ export default function ProjectDetailsView() {
   if (data && user)
     return (
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold wrap-break-word">{data.projectName}</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold wrap-break-word">
+          {data.projectName}
+        </h1>
         <p className="text-base sm:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           {data.description}
         </p>

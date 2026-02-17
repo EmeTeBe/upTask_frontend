@@ -106,7 +106,10 @@ export default function DeleteProjectModal() {
                 <ErrorMessage>{errors.password.message}</ErrorMessage>
               )}
               <div className="flex flex-col gap-2 md:gap-3">
-                <label className="font-normal text-base md:text-2xl" htmlFor="password">
+                <label
+                  className="font-normal text-base md:text-2xl"
+                  htmlFor="password"
+                >
                   Contraseña
                 </label>
                 <input

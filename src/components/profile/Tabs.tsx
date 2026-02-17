@@ -47,7 +47,10 @@ export default function Tabs() {
 
       <div className="hidden sm:block">
         <div className="border-b border-gray-200">
-          <nav className="-mb-px flex space-x-4 md:space-x-8 overflow-x-auto md:overflow-x-visible" aria-label="Tabs">
+          <nav
+            className="-mb-px flex space-x-4 md:space-x-8 overflow-x-auto md:overflow-x-visible"
+            aria-label="Tabs"
+          >
             {tabs.map((tab) => (
               <Link
                 key={tab.name}

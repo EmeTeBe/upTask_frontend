@@ -60,7 +60,9 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
           <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>
         )}
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl">Password</label>
+          <label className="font-normal text-base md:text-lg lg:text-2xl">
+            Password
+          </label>
 
           <input
             type="password"
@@ -81,7 +83,9 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
         </div>
 
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl">Repetir Password</label>
+          <label className="font-normal text-base md:text-lg lg:text-2xl">
+            Repetir Password
+          </label>
 
           <input
             id="password_confirmation"

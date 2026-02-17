@@ -61,7 +61,10 @@ export default function RegisterView() {
           <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>
         )}
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl" htmlFor="email">
+          <label
+            className="font-normal text-base md:text-lg lg:text-2xl"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -84,7 +87,9 @@ export default function RegisterView() {
         </div>
 
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl">Nombre</label>
+          <label className="font-normal text-base md:text-lg lg:text-2xl">
+            Nombre
+          </label>
           <input
             type="name"
             placeholder="Nombre de Registro"
@@ -100,7 +105,9 @@ export default function RegisterView() {
         </div>
 
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl">Password</label>
+          <label className="font-normal text-base md:text-lg lg:text-2xl">
+            Password
+          </label>
 
           <input
             type="password"
@@ -121,7 +128,9 @@ export default function RegisterView() {
         </div>
 
         <div className="flex flex-col gap-2 md:gap-3">
-          <label className="font-normal text-base md:text-lg lg:text-2xl">Repetir Password</label>
+          <label className="font-normal text-base md:text-lg lg:text-2xl">
+            Repetir Password
+          </label>
 
           <input
             id="password_confirmation"

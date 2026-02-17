@@ -20,7 +20,10 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
         <ErrorMessage>{errors.description.message}</ErrorMessage>
       )}
       <div className="mb-5 space-y-3">
-        <label htmlFor="projectName" className="text-xs md:text-sm uppercase font-bold">
+        <label
+          htmlFor="projectName"
+          className="text-xs md:text-sm uppercase font-bold"
+        >
           Nombre del Proyecto
         </label>
         <input
@@ -39,7 +42,10 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
       </div>
 
       <div className="mb-5 space-y-3">
-        <label htmlFor="clientName" className="text-xs md:text-sm uppercase font-bold">
+        <label
+          htmlFor="clientName"
+          className="text-xs md:text-sm uppercase font-bold"
+        >
           Nombre Cliente
         </label>
         <input
@@ -58,7 +64,10 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
       </div>
 
       <div className="mb-5 space-y-3">
-        <label htmlFor="description" className="text-xs md:text-sm uppercase font-bold">
+        <label
+          htmlFor="description"
+          className="text-xs md:text-sm uppercase font-bold"
+        >
           Descripción
         </label>
         <textarea

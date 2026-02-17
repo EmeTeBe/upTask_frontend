@@ -55,7 +55,10 @@ export default function LoginView() {
           <ErrorMessage>{errors.password.message}</ErrorMessage>
         )}
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-normal text-base md:text-lg lg:text-2xl">
+          <label
+            htmlFor="email"
+            className="font-normal text-base md:text-lg lg:text-2xl"
+          >
             Email
           </label>
 
@@ -79,7 +82,10 @@ export default function LoginView() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="password" className="font-normal text-base md:text-lg lg:text-2xl">
+          <label
+            htmlFor="password"
+            className="font-normal text-base md:text-lg lg:text-2xl"
+          >
             Password
           </label>
 

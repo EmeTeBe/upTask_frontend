@@ -34,7 +34,9 @@ export default function ProfileForm({ data }: ProfileFormProps) {
   return (
     <>
       <div className="mx-auto max-w-3xl px-4 md:px-0">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black">Mi Perfil</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black">
+          Mi Perfil
+        </h1>
         <p className="text-base md:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Aquí puedes actualizar tu información
         </p>
@@ -47,7 +49,10 @@ export default function ProfileForm({ data }: ProfileFormProps) {
           {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
           <div className="mb-5 space-y-3">
-            <label className="text-xs md:text-sm uppercase font-bold" htmlFor="name">
+            <label
+              className="text-xs md:text-sm uppercase font-bold"
+              htmlFor="name"
+            >
               Nombre
             </label>
             <input
@@ -62,7 +67,10 @@ export default function ProfileForm({ data }: ProfileFormProps) {
           </div>
 
           <div className="mb-5 space-y-3">
-            <label className="text-xs md:text-sm uppercase font-bold" htmlFor="password">
+            <label
+              className="text-xs md:text-sm uppercase font-bold"
+              htmlFor="password"
+            >
               E-mail
             </label>
             <input

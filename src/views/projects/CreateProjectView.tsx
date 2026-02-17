@@ -34,7 +34,9 @@ export default function CreateProjectView() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 md:px-0">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black">Crear Proyecto</h1>
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black">
+        Crear Proyecto
+      </h1>
       <p className="text-base sm:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
         Llena el siguiente formulario para crear un proyecto
       </p>

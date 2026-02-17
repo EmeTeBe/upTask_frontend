@@ -74,7 +74,9 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
         <p className="text-base md:text-lg lg:text-xl font-semibold text-slate-600 text-left wrap-break-words">
           {task.taskName}
         </p>
-        <p className="text-slate-500 text-xs md:text-sm font-light line-clamp-2">{task.description}</p>
+        <p className="text-slate-500 text-xs md:text-sm font-light line-clamp-2">
+          {task.description}
+        </p>
       </div>
       <div className="shrink-0">
         <Menu>

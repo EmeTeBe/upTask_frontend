@@ -34,7 +34,9 @@ export default function ChangePasswordView() {
   return (
     <>
       <div className="mx-auto max-w-3xl px-4 md:px-0">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black">Cambiar Password</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black">
+          Cambiar Password
+        </h1>
         <p className="text-base md:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Utiliza este formulario para cambiar tu password
         </p>
@@ -77,7 +79,10 @@ export default function ChangePasswordView() {
           </div>
 
           <div className="mb-5 space-y-2 md:space-y-3">
-            <label className="text-xs md:text-sm uppercase font-bold" htmlFor="password">
+            <label
+              className="text-xs md:text-sm uppercase font-bold"
+              htmlFor="password"
+            >
               Nueva Contraseña
             </label>
             <input

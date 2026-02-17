@@ -17,7 +17,10 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
         <ErrorMessage>{errors.description.message}</ErrorMessage>
       )}
       <div className="flex flex-col gap-2">
-        <label className="font-normal text-base md:text-lg lg:text-2xl text-slate-800" htmlFor="name">
+        <label
+          className="font-normal text-base md:text-lg lg:text-2xl text-slate-800"
+          htmlFor="name"
+        >
           Nombre de la tarea
         </label>
         <input
