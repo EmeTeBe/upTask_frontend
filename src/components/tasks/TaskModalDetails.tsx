@@ -65,17 +65,17 @@ export default function TaskModalDetails() {
         onClose={() => navigate(location.pathname, { replace: true })}
       >
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto bg-black/40">
-          <div className="flex min-h-full items-center justify-center p-4">
+          <div className="flex min-h-full items-center justify-center p-3 md:p-4">
             <DialogPanel
               transition
-              className="w-full max-w-2xl rounded-xl bg-white/70 p-6 backdrop-blur-2xl shadow-inner shadow-white duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+              className="w-full max-w-xl md:max-w-2xl rounded-xl bg-white/70 p-4 md:p-6 backdrop-blur-2xl shadow-inner shadow-white duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
             >
-              <div className="flex justify-between">
+              <div className="flex justify-between items-start gap-4">
                 <div>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-xs md:text-sm text-slate-600">
                     Agregada el: {formatDate(data.createdAt)}
                   </p>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-xs md:text-sm text-slate-600">
                     Última actualización: {formatDate(data.updatedAt)}
                   </p>
                 </div>

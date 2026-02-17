@@ -36,10 +36,10 @@ export default function LoginView() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-white text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
         Iniciar sesión
       </h1>
-      <p className="text-2xl font-light text-white mt-5 text-center">
+      <p className="text-base sm:text-lg lg:text-2xl font-light text-white mt-4 md:mt-5 text-center">
         Comienza a planear tus proyectos{" "}
         <span className=" text-fuchsia-500 font-bold">
           iniciando sesión en este formulario
@@ -47,7 +47,7 @@ export default function LoginView() {
       </p>
       <form
         onSubmit={handleSubmit(handleLogin)}
-        className="space-y-4 p-10 bg-white rounded mt-10"
+        className="space-y-4 p-6 md:p-10 bg-white rounded mt-6 md:mt-10"
         noValidate
       >
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
@@ -55,7 +55,7 @@ export default function LoginView() {
           <ErrorMessage>{errors.password.message}</ErrorMessage>
         )}
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-normal text-2xl">
+          <label htmlFor="email" className="font-normal text-base md:text-lg lg:text-2xl">
             Email
           </label>
 
@@ -65,8 +65,8 @@ export default function LoginView() {
             placeholder="Email de Registro"
             className={
               errors.email
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("email", {
               required: "El Email es obligatorio",
@@ -79,7 +79,7 @@ export default function LoginView() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="password" className="font-normal text-2xl">
+          <label htmlFor="password" className="font-normal text-base md:text-lg lg:text-2xl">
             Password
           </label>
 
@@ -88,8 +88,8 @@ export default function LoginView() {
             placeholder="Password de Registro"
             className={
               errors.password
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("password", {
               required: "El Password es obligatorio",
@@ -100,19 +100,19 @@ export default function LoginView() {
         <input
           type="submit"
           value="Iniciar Sesión"
-          className="bg-fuchsia-500 hover:bg-fuchsia-700 w-full p-3 mt-3 text-white font-bold text-xl rounded cursor-pointer"
+          className="bg-fuchsia-500 hover:bg-fuchsia-700 w-full p-2 md:p-3 mt-3 text-white font-bold text-sm md:text-lg lg:text-xl rounded cursor-pointer"
         />
       </form>
-      <nav className="mt-10 flex flex-col space-y-4">
+      <nav className="mt-6 md:mt-10 flex flex-col space-y-3 md:space-y-4">
         <Link
           to={"/auth/register"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-xs md:text-sm"
         >
           ¿No tienes cuenta? Crea Una
         </Link>
         <Link
           to={"/auth/forgot-password"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-xs md:text-sm"
         >
           ¿Olvidaste tu constraseña? Reestablecer
         </Link>

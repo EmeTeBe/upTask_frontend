@@ -42,48 +42,48 @@ export default function ProjectTeamView() {
 
   if (data)
     return (
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-semibold">Administra el Equipo</h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">Administra el Equipo</h1>
+        <p className="text-base sm:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Administra los colaboradores de este proyecto para formar el equipo de
           trabajo.
         </p>
-        <nav className="mt-5 flex gap-5">
+        <nav className="mt-5 flex flex-col sm:flex-row gap-3 sm:gap-5">
           <button
             type="button"
-            className="bg-fuchsia-600 hover:bg-fuchsia-800 px-3 py-1 items-center shadow-inner shadow-white/60 text-white lg:text-xl font-semibold cursor-pointer rounded transition-colors"
+            className="bg-fuchsia-600 hover:bg-fuchsia-800 px-3 md:px-4 py-1 md:py-2 shadow-inner shadow-white/60 text-white text-sm md:text-base lg:text-xl font-semibold cursor-pointer rounded transition-colors"
             onClick={() => navigate(location.pathname + "?addMember=true")}
           >
             Agregar Colaborador
           </button>
           <Link
             to={`/projects/${projectId}`}
-            className="bg-fuchsia-600 hover:bg-fuchsia-800 px-3 py-1 items-center shadow-inner shadow-white/60 text-white lg:text-xl font-semibold rounded transition-colors"
+            className="bg-fuchsia-600 hover:bg-fuchsia-800 px-3 md:px-4 py-1 md:py-2 shadow-inner shadow-white/60 text-white text-sm md:text-base lg:text-xl font-semibold rounded transition-colors text-center"
           >
             Volver al Proyecto
           </Link>
         </nav>
 
-        <h2 className="text-3xl font-bold mt-5">Miembros del Proyecto</h2>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mt-6 md:mt-8">Miembros del Proyecto</h2>
         {data.length ? (
           <ul
             role="list"
-            className="divide-y divide-gray-200 border border-gray-100 mt-10 bg-white shadow-lg"
+            className="divide-y divide-gray-200 border border-gray-100 mt-6 md:mt-10 bg-white shadow-lg"
           >
             {data?.map((member) => (
               <li
                 key={member._id}
-                className="flex justify-between gap-x-6 px-5 py-8"
+                className="flex flex-col md:flex-row justify-between gap-4 md:gap-x-6 px-4 md:px-5 py-4 md:py-8"
               >
                 <div className="flex min-w-0 gap-x-4">
                   <div className="min-w-0 flex-auto space-y-2">
-                    <p className="text-gray-600 cursor-pointer hover:underline text-3xl font-bold">
+                    <p className="text-gray-600 cursor-pointer hover:underline text-lg sm:text-2xl lg:text-3xl font-bold break-words">
                       {member.name}
                     </p>
-                    <p className="text-sm text-gray-400 mt-2">{member.email}</p>
+                    <p className="text-xs md:text-sm text-gray-400 mt-2 break-words">{member.email}</p>
                   </div>
                 </div>
-                <div className="flex shrink-0 items-center gap-x-6">
+                <div className="flex shrink-0 items-center justify-end gap-x-3 md:gap-x-6">
                   <Menu>
                     <MenuButton className="cursor-pointer outline-none items-center">
                       <span className="sr-only">opciones</span>

@@ -52,7 +52,8 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
         padding: "1.25rem",
         backgroundColor: "#FFF",
-        width: "300px",
+        minWidth: "280px",
+        maxWidth: "100%",
         display: "flex",
         border: "2px solid #cbd5e1",
         borderWidth: "1px",
@@ -61,21 +62,21 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
 
   return (
     <li
-      className={`p-5 bg-white border border-slate-300 border-t-2 flex justify-between gap-3 rounded ${statusStyles[task.status]}`}
+      className={`p-4 md:p-5 bg-white border border-slate-300 border-t-2 flex flex-col md:flex-row justify-between gap-3 rounded ${statusStyles[task.status]}`}
     >
       <div
         {...listeners}
         {...attributes}
         ref={setNodeRef}
         style={style}
-        className="min-w-0 flex flex-col gap-y-4 cursor-pointer"
+        className="min-w-0 flex flex-col gap-y-2 md:gap-y-4 cursor-move"
       >
-        <p className="text-xl font-semibold text-slate-600 text-left">
+        <p className="text-base md:text-lg lg:text-xl font-semibold text-slate-600 text-left wrap-break-words">
           {task.taskName}
         </p>
-        <p className="text-slate-500 text-sm font-light">{task.description}</p>
+        <p className="text-slate-500 text-xs md:text-sm font-light line-clamp-2">{task.description}</p>
       </div>
-      <div className="">
+      <div className="shrink-0">
         <Menu>
           <MenuButton className="items-center cursor-pointer py-1 outline-none">
             <EllipsisVerticalIcon className="size-6 fill-slate-500 outline-none" />

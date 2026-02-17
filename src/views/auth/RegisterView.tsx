@@ -39,17 +39,17 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1 className="text-4xl font-black text-center text-white">
+      <h1 className="text-3xl sm:text-4xl font-black text-center text-white">
         Crear Cuenta
       </h1>
-      <p className="text-xl font-light text-center text-white">
+      <p className="text-sm sm:text-lg lg:text-xl font-light text-center text-white mt-3">
         Llena el formulario para {""}
         <span className=" text-fuchsia-500 font-bold"> crear tu cuenta</span>
       </p>
 
       <form
         onSubmit={handleSubmit(handleRegister)}
-        className="space-y-4 p-10  bg-white mt-10 rounded"
+        className="space-y-3 md:space-y-4 p-6 md:p-10 bg-white mt-6 md:mt-10 rounded"
         noValidate
       >
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
@@ -60,8 +60,8 @@ export default function RegisterView() {
         {errors.password_confirmation && (
           <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>
         )}
-        <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl" htmlFor="email">
+        <div className="flex flex-col gap-2 md:gap-3">
+          <label className="font-normal text-base md:text-lg lg:text-2xl" htmlFor="email">
             Email
           </label>
           <input
@@ -70,8 +70,8 @@ export default function RegisterView() {
             placeholder="Email de Registro"
             className={
               errors.email
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("email", {
               required: "El Email de registro es obligatorio",
@@ -83,15 +83,15 @@ export default function RegisterView() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl">Nombre</label>
+        <div className="flex flex-col gap-2 md:gap-3">
+          <label className="font-normal text-base md:text-lg lg:text-2xl">Nombre</label>
           <input
             type="name"
             placeholder="Nombre de Registro"
             className={
               errors.name
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("name", {
               required: "El Nombre de usuario es obligatorio",
@@ -99,16 +99,16 @@ export default function RegisterView() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl">Password</label>
+        <div className="flex flex-col gap-2 md:gap-3">
+          <label className="font-normal text-base md:text-lg lg:text-2xl">Password</label>
 
           <input
             type="password"
             placeholder="Password de Registro"
             className={
               errors.password
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("password", {
               required: "La constraseña es obligatoria",
@@ -120,8 +120,8 @@ export default function RegisterView() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl">Repetir Password</label>
+        <div className="flex flex-col gap-2 md:gap-3">
+          <label className="font-normal text-base md:text-lg lg:text-2xl">Repetir Password</label>
 
           <input
             id="password_confirmation"
@@ -129,8 +129,8 @@ export default function RegisterView() {
             placeholder="Repite Password de Registro"
             className={
               errors.password_confirmation
-                ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                : "w-full p-3  border-gray-300 border rounded"
+                ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
             }
             {...register("password_confirmation", {
               required: "Repetir Password es obligatorio",
@@ -143,19 +143,19 @@ export default function RegisterView() {
         <input
           type="submit"
           value="Registrarme"
-          className="bg-fuchsia-500 hover:bg-fuchsia-700 w-full p-3 text-white font-bold text-xl rounded cursor-pointer"
+          className="bg-fuchsia-500 hover:bg-fuchsia-700 w-full p-2 md:p-3 text-white font-bold text-sm md:text-lg lg:text-xl rounded cursor-pointer"
         />
       </form>
-      <nav className="mt-10 flex flex-col space-y-4">
+      <nav className="mt-6 md:mt-10 flex flex-col space-y-2 md:space-y-4">
         <Link
           to={"/auth/login"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-xs md:text-sm"
         >
           ¿Ya tienes una cuenta? Inicia sesión
         </Link>
         <Link
           to={"/auth/forgot-password"}
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-xs md:text-sm"
         >
           ¿Olvidaste tu constraseña? Reestablecer
         </Link>

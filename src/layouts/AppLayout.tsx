@@ -22,9 +22,9 @@ export default function AppLayout() {
   if (data)
     return (
       <div className="flex flex-col">
-        <header className="bg-gray-800 py-5 px-10">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center">
-            <div className="w-64">
+        <header className="bg-gray-800 py-4 md:py-5 px-4 md:px-6 lg:px-10">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <div className="w-40 md:w-48 lg:w-64">
               <Link to={`/`}>
                 <Logo />
               </Link>
@@ -34,11 +34,11 @@ export default function AppLayout() {
             />
           </div>
         </header>
-        <section className="mt-10 px-10">
+        <section className="mt-8 md:mt-10 px-4 md:px-6 lg:px-10">
           <Outlet />
         </section>
-        <footer className="py-5 px-10">
-          <p className="text-center">
+        <footer className="py-4 md:py-5 px-4 md:px-6 lg:px-10">
+          <p className="text-center text-sm md:text-base">
             Todos los derechos reservados {new Date().getFullYear()}
           </p>
         </footer>

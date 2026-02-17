@@ -29,24 +29,24 @@ export default function ConfirmAccountView() {
   const handleComplete = (token: ConfirmToken["token"]) => mutate({ token });
 
   return (
-    <div className="mt-20">
-      <h1 className="text-5xl font-bold text-white">Confirma tu Cuenta</h1>
-      <p className="text-2xl font-light text-white mt-5">
+    <div className="mt-12 md:mt-20">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Confirma tu Cuenta</h1>
+      <p className="text-sm sm:text-lg lg:text-2xl font-light text-white mt-4 md:mt-5">
         Ingresa el código que recibiste {""}
         <span className=" text-fuchsia-500 font-bold"> por e-mail</span>
       </p>
-      <form className="space-y-8 p-10 bg-white mt-10 rounded">
-        <label className="font-normal text-2xl text-center block">
+      <form className="space-y-6 md:space-y-8 p-6 md:p-10 bg-white mt-6 md:mt-10 rounded">
+        <label className="font-normal text-base md:text-lg lg:text-2xl text-center block">
           Código de 6 dígitos
         </label>
-        <div className="flex justify-center gap-5">
+        <div className="flex justify-center gap-3 md:gap-5">
           <PinInput
             value={token}
             onChange={handleChange}
             onComplete={handleComplete}
           >
             <PinInputField
-              className="size-12 text-center rounded-lg border border-gray-300 placeholder-white"
+              className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base"
               autoFocus
             />
             <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />

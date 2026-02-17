@@ -64,20 +64,20 @@ export default function AddMemberModal() {
       onClose={closeModal}
     >
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto backdrop-blur-sm bg-black/30">
-        <div className="flex min-h-full items-center justify-center p-4">
+        <div className="flex min-h-full items-center justify-center p-3 md:p-4">
           <DialogPanel
             transition
-            className="w-full max-w-2xl rounded-xl border-gray-100 shadow bg-white p-6 duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+            className="w-full max-w-xl md:max-w-2xl rounded-xl border-gray-100 shadow bg-white p-4 md:p-6 duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
           >
-            <div className="mb-5 flex justify-between">
-              <div className="felx flex-col">
+            <div className="mb-4 md:mb-5 flex justify-between items-start gap-4">
+              <div className="flex flex-col">
                 <DialogTitle
                   as="h3"
-                  className="text-2xl font-semibold text-black"
+                  className="text-lg md:text-2xl font-semibold text-black"
                 >
                   Agregar colaborador al equipo
                 </DialogTitle>
-                <p className="mt-2 text-sm/6 text-black">
+                <p className="mt-2 text-xs md:text-sm/6 text-black">
                   Busca el nuevo integrante por email{" "}
                   <span className="text-fuchsia-700">
                     para agregarlo al proyecto
@@ -85,21 +85,21 @@ export default function AddMemberModal() {
                 </p>
               </div>
               <Button
-                className="items-center h-8 rounded-md bg-fuchsia-600 px-2 py-1 shadow-inner shadow-white/60 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-fuchsia-800 data-open:bg-gray-700 cursor-pointer"
+                className="shrink-0 items-center h-7 md:h-8 rounded-md bg-fuchsia-600 px-2 py-1 shadow-inner shadow-white/60 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-fuchsia-800 data-open:bg-gray-700 cursor-pointer"
                 onClick={closeModal}
               >
-                <XCircleIcon className="text-white size-6" />
+                <XCircleIcon className="text-white size-5 md:size-6" />
               </Button>
             </div>
             <form
-              className="mt-5 space-y-5"
+              className="mt-5 space-y-4 md:space-y-5"
               noValidate
               onSubmit={handleSubmit(handleSearchUser)}
             >
               <AddMemberForm register={register} errors={errors} />
               <input
                 type="submit"
-                className="bg-fuchsia-600 hover:bg-fuchsia-800 shadow-inner shadow-white/60 transition-colors w-full p-1 text-sm lg:text-lg text-white uppercase font-bold rounded cursor-pointer"
+                className="bg-fuchsia-600 hover:bg-fuchsia-800 shadow-inner shadow-white/60 transition-colors w-full p-2 md:p-3 text-xs md:text-lg text-white uppercase font-bold rounded cursor-pointer"
                 value="Buscar Usuario"
               />
             </form>

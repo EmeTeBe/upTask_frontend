@@ -17,7 +17,7 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
         <ErrorMessage>{errors.description.message}</ErrorMessage>
       )}
       <div className="flex flex-col gap-2">
-        <label className="font-normal text-2xl text-slate-800" htmlFor="name">
+        <label className="font-normal text-base md:text-lg lg:text-2xl text-slate-800" htmlFor="name">
           Nombre de la tarea
         </label>
         <input
@@ -26,8 +26,8 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
           placeholder="Nombre de la tarea"
           className={
             errors.taskName
-              ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-              : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+              ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+              : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
           }
           {...register("taskName", {
             required: "El nombre de la tarea es obligatorio",
@@ -37,7 +37,7 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
 
       <div className="flex flex-col gap-2">
         <label
-          className="font-normal text-2xl text-slate-800"
+          className="font-normal text-base md:text-lg lg:text-2xl text-slate-800"
           htmlFor="description"
         >
           Descripción de la tarea
@@ -47,8 +47,8 @@ export default function TaskForm({ errors, register }: TaskFormProps) {
           placeholder="Descripción de la tarea"
           className={
             errors.description
-              ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-              : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+              ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+              : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
           }
           {...register("description", {
             required: "La descripción de la tarea es obligatoria",

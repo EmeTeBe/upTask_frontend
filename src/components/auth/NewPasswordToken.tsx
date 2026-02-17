@@ -34,32 +34,32 @@ export default function NewPasswordToken({
 
   return (
     <div>
-      <form className="space-y-8 p-10 rounded-lg bg-white mt-10">
-        <label className="font-normal text-2xl text-center block">
+      <form className="space-y-6 md:space-y-8 p-6 md:p-10 rounded-lg bg-white mt-6 md:mt-10">
+        <label className="font-normal text-base md:text-lg lg:text-2xl text-center block">
           Código de 6 dígitos
         </label>
-        <div className="flex justify-center gap-5">
+        <div className="flex justify-center gap-3 md:gap-5">
           <PinInput
             value={token}
             onChange={handleChange}
             onComplete={handleComplete}
           >
             <PinInputField
-              className="size-12 text-center rounded-lg border border-gray-300 placeholder-white"
+              className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base"
               autoFocus
             />
-            <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />
-            <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />
-            <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />
-            <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />
-            <PinInputField className="size-12 text-center rounded-lg border border-gray-300 placeholder-white" />
+            <PinInputField className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base" />
+            <PinInputField className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base" />
+            <PinInputField className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base" />
+            <PinInputField className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base" />
+            <PinInputField className="size-10 md:size-12 text-center rounded-lg border border-gray-300 placeholder-white text-sm md:text-base" />
           </PinInput>
         </div>
       </form>
-      <nav className="mt-10 flex flex-col space-y-4">
+      <nav className="mt-6 md:mt-10 flex flex-col space-y-2 md:space-y-4">
         <Link
           to="/auth/forgot-password"
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-300 font-normal text-xs md:text-sm"
         >
           Solicitar un nuevo Código
         </Link>

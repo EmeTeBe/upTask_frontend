@@ -34,17 +34,17 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-white">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
         Solicitar Código de Confirmación
       </h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="text-sm sm:text-lg lg:text-2xl font-light text-white mt-4 md:mt-5">
         Coloca tu e-mail para recibir {""}
         <span className=" text-fuchsia-500 font-bold"> un nuevo código</span>
       </p>
 
       <form
         onSubmit={handleSubmit(handleRequestCode)}
-        className="space-y-8 p-10 rounded-lg bg-white mt-10"
+        className="space-y-6 md:space-y-8 p-6 md:p-10 rounded-lg bg-white mt-6 md:mt-10"
         noValidate
       >
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}

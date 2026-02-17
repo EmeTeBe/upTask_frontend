@@ -9,10 +9,10 @@ export default function ConfirmAccountView() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-white text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
         Reestablecer Contraseña
       </h1>
-      <p className="text-2xl font-light text-white mt-5 text-center">
+      <p className="text-sm sm:text-lg lg:text-2xl font-light text-white mt-4 md:mt-5 text-center">
         Ingresa el código que recibiste {""}
         <span className=" text-fuchsia-500 font-bold"> por e-mail</span>
       </p>

@@ -20,15 +20,15 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
         <ErrorMessage>{errors.description.message}</ErrorMessage>
       )}
       <div className="mb-5 space-y-3">
-        <label htmlFor="projectName" className="text-sm uppercase font-bold">
+        <label htmlFor="projectName" className="text-xs md:text-sm uppercase font-bold">
           Nombre del Proyecto
         </label>
         <input
           id="projectName"
           className={
             errors.projectName
-              ? `w-full p-3  border border-red-400 rounded outline-none`
-              : `w-full p-3  border border-gray-200 rounded`
+              ? `w-full p-2 md:p-3 border border-red-400 rounded outline-none text-sm md:text-base`
+              : `w-full p-2 md:p-3 border border-gray-200 rounded text-sm md:text-base`
           }
           type="text"
           placeholder="Nombre del Proyecto"
@@ -39,15 +39,15 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
       </div>
 
       <div className="mb-5 space-y-3">
-        <label htmlFor="clientName" className="text-sm uppercase font-bold">
+        <label htmlFor="clientName" className="text-xs md:text-sm uppercase font-bold">
           Nombre Cliente
         </label>
         <input
           id="clientName"
           className={
             errors.clientName
-              ? `w-full p-3  border border-red-400 rounded outline-none`
-              : `w-full p-3  border border-gray-200 rounded`
+              ? `w-full p-2 md:p-3 border border-red-400 rounded outline-none text-sm md:text-base`
+              : `w-full p-2 md:p-3 border border-gray-200 rounded text-sm md:text-base`
           }
           type="text"
           placeholder="Nombre del Cliente"
@@ -58,15 +58,15 @@ export default function ProjectForm({ register, errors }: ProjectFormProps) {
       </div>
 
       <div className="mb-5 space-y-3">
-        <label htmlFor="description" className="text-sm uppercase font-bold">
+        <label htmlFor="description" className="text-xs md:text-sm uppercase font-bold">
           Descripción
         </label>
         <textarea
           id="description"
           className={
             errors.description
-              ? `w-full p-3  border border-red-400 rounded outline-none`
-              : `w-full p-3  border border-gray-200 rounded`
+              ? `w-full p-2 md:p-3 border border-red-400 rounded outline-none text-sm md:text-base`
+              : `w-full p-2 md:p-3 border border-gray-200 rounded text-sm md:text-base`
           }
           placeholder="Descripción del Proyecto"
           {...register("description", {

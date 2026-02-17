@@ -33,30 +33,30 @@ export default function CreateProjectView() {
   const handleForm = (formData: ProjectFormData) => mutate(formData);
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-5xl font-black">Crear Proyecto</h1>
-      <p className="text-2xl font-light text-gray-500 mt-5">
+    <div className="max-w-3xl mx-auto px-4 md:px-0">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black">Crear Proyecto</h1>
+      <p className="text-base sm:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
         Llena el siguiente formulario para crear un proyecto
       </p>
 
-      <nav className="my-5">
+      <nav className="my-4 md:my-5">
         <Link
-          className="bg-purple-400 hover:bg-purple-500 px-3 shadow py-1 items-center text-white lg:text-xl font-semibold transition-colors rounded"
+          className="inline-block bg-purple-400 hover:bg-purple-500 px-3 md:px-4 shadow py-1 md:py-2 text-white text-sm md:text-base lg:text-xl font-semibold transition-colors rounded"
           to="/"
         >
           Volver a Proyectos
         </Link>
       </nav>
       <form
-        className="mt-10 bg-white shadow-lg p-10 rounded"
+        className="mt-8 md:mt-10 bg-white shadow-lg p-6 md:p-10 rounded"
         onSubmit={handleSubmit(handleForm)}
         noValidate
       >
         <ProjectForm register={register} errors={errors} />
         <input
           type="submit"
-          value="Crear PRoyectos"
-          className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-colors w-full p-3 text-white uppercase font-bold rounded cursor-pointer"
+          value="Crear Proyectos"
+          className="bg-fuchsia-400 hover:bg-fuchsia-500 transition-colors w-full p-2 md:p-3 text-white text-sm md:text-base lg:text-lg uppercase font-bold rounded cursor-pointer"
         />
       </form>
     </div>

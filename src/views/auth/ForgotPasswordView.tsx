@@ -34,10 +34,10 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-white text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
         Reestablecer contraseña
       </h1>
-      <p className="text-2xl font-light text-white mt-5 text-center">
+      <p className="text-sm sm:text-lg lg:text-2xl font-light text-white mt-4 md:mt-5 text-center">
         ¿Olvidaste tu contraseña? Coloca tu e-mail para{" "}
         <span className=" text-fuchsia-500 font-bold">
           reestablecer contaseña
@@ -46,12 +46,12 @@ export default function RegisterView() {
 
       <form
         onSubmit={handleSubmit(handleRequestCode)}
-        className="space-y-8 p-10 rounded-lg bg-white mt-10"
+        className="space-y-6 md:space-y-8 p-6 md:p-10 rounded-lg bg-white mt-6 md:mt-10"
         noValidate
       >
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-        <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl" htmlFor="email">
+        <div className="flex flex-col gap-2 md:gap-3">
+          <label className="font-normal text-base md:text-lg lg:text-2xl" htmlFor="email">
             Email
           </label>
           <input
@@ -60,8 +60,8 @@ export default function RegisterView() {
             placeholder="Email de Registro"
             className={
               errors.email
-                ? "w-full p-3 rounded-lg border-red-400 border outline-none"
-                : "w-full p-3 rounded-lg border-gray-300 border"
+                ? "w-full p-2 md:p-3 rounded-lg border-red-400 border outline-none text-sm md:text-base"
+                : "w-full p-2 md:p-3 rounded-lg border-gray-300 border text-sm md:text-base"
             }
             {...register("email", {
               required: "El Email de registro es obligatorio",
@@ -76,7 +76,7 @@ export default function RegisterView() {
         <input
           type="submit"
           value="Enviar Código"
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 rounded-lg text-white font-black  text-xl cursor-pointer"
+          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-2 md:p-3 rounded-lg text-white font-black text-sm md:text-lg lg:text-xl cursor-pointer"
         />
       </form>
 

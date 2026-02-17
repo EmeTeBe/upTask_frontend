@@ -70,20 +70,20 @@ export default function DeleteProjectModal() {
       onClose={closeModal}
     >
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto bg-black/40">
-        <div className="flex min-h-full items-center justify-center p-4">
+        <div className="flex min-h-full items-center justify-center p-3 md:p-4">
           <DialogPanel
             transition
-            className="w-full max-w-2xl rounded-xl bg-white/70 p-6 backdrop-blur-lg shadow-inner shadow-white duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
+            className="w-full max-w-xl md:max-w-2xl rounded-xl bg-white/70 p-4 md:p-6 backdrop-blur-lg shadow-inner shadow-white duration-300 ease-out data-closed:transform-[scale(95%)] data-closed:opacity-0"
           >
-            <div className="mb-5 flex justify-between">
+            <div className="mb-4 md:mb-5 flex justify-between items-start gap-4">
               <div className="flex flex-col">
                 <DialogTitle
                   as="h3"
-                  className="text-2xl font-medium text-slate-800"
+                  className="text-lg md:text-2xl font-medium text-slate-800"
                 >
-                  ELiminar Proyecto
+                  Eliminar Proyecto
                 </DialogTitle>
-                <p className="mt-2 text-sm text-slate-800">
+                <p className="mt-2 text-xs md:text-sm text-slate-800">
                   Confirma la eliminación de este proyecto{" "}
                   <span className="text-fuchsia-700">
                     colocando tu contraseña
@@ -91,22 +91,22 @@ export default function DeleteProjectModal() {
                 </p>
               </div>
               <Button
-                className="items-center h-8 rounded-md bg-fuchsia-900 px-2 py-1 shadow-inner shadow-white/40 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-fuchsia-500 data-open:bg-gray-700 cursor-pointer"
+                className="shrink-0 items-center h-7 md:h-8 rounded-md bg-fuchsia-900 px-2 py-1 shadow-inner shadow-white/40 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-fuchsia-500 data-open:bg-gray-700 cursor-pointer"
                 onClick={closeModal}
               >
-                <XCircleIcon className="text-white size-6" />
+                <XCircleIcon className="text-white size-5 md:size-6" />
               </Button>
             </div>
             <form
-              className="mt-10 space-y-3"
+              className="mt-6 md:mt-10 space-y-3"
               noValidate
               onSubmit={handleSubmit(handleEditTask)}
             >
               {errors.password && (
                 <ErrorMessage>{errors.password.message}</ErrorMessage>
               )}
-              <div className="flex flex-col gap-3">
-                <label className="font-normal text-2xl" htmlFor="password">
+              <div className="flex flex-col gap-2 md:gap-3">
+                <label className="font-normal text-base md:text-2xl" htmlFor="password">
                   Contraseña
                 </label>
                 <input
@@ -114,7 +114,7 @@ export default function DeleteProjectModal() {
                   type="password"
                   placeholder="Contraseña Inicio de Sesión"
                   autoFocus
-                  className="w-full p-3  border-gray-300 border rounded"
+                  className="w-full p-2 md:p-3 border-gray-300 border rounded text-sm md:text-base"
                   {...register("password", {
                     required: "La contraseña es obligatoria",
                   })}
@@ -122,7 +122,7 @@ export default function DeleteProjectModal() {
               </div>
               <input
                 type="submit"
-                className="bg-fuchsia-600 hover:bg-fuchsia-800 shadow-inner shadow-white/60 transition-colors w-full p-1 text-sm lg:text-lg text-white uppercase font-bold rounded cursor-pointer"
+                className="bg-fuchsia-600 hover:bg-fuchsia-800 shadow-inner shadow-white/60 transition-colors w-full p-2 md:p-3 text-xs md:text-lg text-white uppercase font-bold rounded cursor-pointer"
                 value="Eliminar Proyecto"
               />
             </form>

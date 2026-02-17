@@ -28,14 +28,14 @@ export default function DashboardView() {
   if (data && user)
     return (
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-semibold">Mis Proyectos</h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">Mis Proyectos</h1>
+        <p className="text-lg sm:text-xl lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Maneja y administra tus proyectos
         </p>
 
-        <nav className="mt-5 px-">
+        <nav className="mt-5">
           <Link
-            className="bg-fuchsia-600 hover:bg-fuchsia-800 px-3 shadow-inner shadow-white/60 py-1 items-center text-white lg:text-xl font-semibold transition-colors rounded"
+            className="inline-block bg-fuchsia-600 hover:bg-fuchsia-800 px-3 md:px-4 shadow-inner shadow-white/60 py-1 md:py-2 text-white text-sm md:text-base lg:text-xl font-semibold transition-colors rounded"
             to="/projects/create"
           >
             Nuevo Proyecto
@@ -49,10 +49,10 @@ export default function DashboardView() {
             {data.map((project) => (
               <li
                 key={project._id}
-                className="flex justify-between gap-x-6 px-5 py-6"
+                className="flex flex-col md:flex-row justify-between gap-4 md:gap-x-6 px-4 md:px-5 py-4 md:py-6"
               >
-                <div className="flex min-w-0 gap-x-4">
-                  <div className="min-w-0 space-y-2">
+                <div className="flex min-w-0 gap-x-4 flex-1">
+                  <div className="min-w-0 space-y-2 w-full">
                     {isManager(project.manager, user._id) ? (
                       <p className="px-2 py-1 bg-purple-600 rounded-4xl uppercase text-xs font-bold font-mono text-white w-fit shadow-inner shadow-white/50">
                         Mánager
@@ -64,19 +64,19 @@ export default function DashboardView() {
                     )}
                     <Link
                       to={`/projects/${project._id}`}
-                      className="text-gray-600 cursor-pointer hover:underline text-3xl font-bold"
+                      className="text-gray-600 cursor-pointer hover:underline text-lg sm:text-2xl lg:text-3xl font-bold wraps-break-words"
                     >
                       {project.projectName}
                     </Link>
-                    <p className="text-sm text-gray-400 mt-2">
+                    <p className="text-xs md:text-sm text-gray-400 mt-2">
                       Cliente: {project.clientName}
                     </p>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-xs md:text-sm text-gray-400 line-clamp-2">
                       {project.description}
                     </p>
                   </div>
                 </div>
-                <div className="flex shrink-0 items-center gap-x-6">
+                <div className="flex shrink-0 items-center justify-end gap-x-3 md:gap-x-6">
                   <Menu>
                     <MenuButton className="cursor-pointer outline-none items-center">
                       <span className="sr-only">opciones</span>
@@ -130,7 +130,7 @@ export default function DashboardView() {
             ))}
           </ul>
         ) : (
-          <p className="text-center py-20">
+          <p className="text-center py-12 md:py-20 text-sm md:text-base">
             No hay proyectos aún {""}
             <Link to="/projects/create" className="text-fuchsia-400 font-bold">
               Crear Proyectos

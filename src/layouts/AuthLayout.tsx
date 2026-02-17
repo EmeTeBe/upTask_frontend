@@ -5,9 +5,9 @@ import { Slide, ToastContainer } from "react-toastify";
 export default function AuthLayout() {
   return (
     <div className="bg-gray-800 min-h-screen">
-      <div className="py-10 lg:py-2 mx-auto w-md">
+      <div className="py-6 md:py-10 lg:py-16 mx-auto w-full max-w-md px-4">
         <Logo />
-        <div className="mt-10">
+        <div className="mt-8 md:mt-10">
           <Outlet />
         </div>
       </div>

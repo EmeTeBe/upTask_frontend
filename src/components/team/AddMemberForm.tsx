@@ -16,7 +16,7 @@ export default function AddMemberForm({
       {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
 
       <div className="flex flex-col gap-2">
-        <label className="font-normal text-2xl text-slate-800" htmlFor="name">
+        <label className="font-normal text-base md:text-lg lg:text-2xl text-slate-800" htmlFor="name">
           E-mail del usuario
         </label>
         <input
@@ -26,8 +26,8 @@ export default function AddMemberForm({
           autoFocus
           className={
             errors.email
-              ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-              : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+              ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+              : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
           }
           {...register("email", {
             required: "El email es obligatorio",

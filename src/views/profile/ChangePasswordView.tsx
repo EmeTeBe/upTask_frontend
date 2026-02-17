@@ -33,15 +33,15 @@ export default function ChangePasswordView() {
 
   return (
     <>
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-5xl font-black ">Cambiar Password</h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">
+      <div className="mx-auto max-w-3xl px-4 md:px-0">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black">Cambiar Password</h1>
+        <p className="text-base md:text-lg lg:text-2xl font-light text-gray-500 mt-4 md:mt-5">
           Utiliza este formulario para cambiar tu password
         </p>
 
         <form
           onSubmit={handleSubmit(handleChangePassword)}
-          className=" mt-14 space-y-5 bg-white shadow-lg p-10 rounded-lg"
+          className="mt-8 md:mt-14 space-y-4 md:space-y-5 bg-white shadow-lg p-6 md:p-10 rounded-lg"
           noValidate
         >
           {errors.currentPassword && (
@@ -53,9 +53,9 @@ export default function ChangePasswordView() {
           {errors.password_confirmation && (
             <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>
           )}
-          <div className="mb-5 space-y-3">
+          <div className="mb-5 space-y-2 md:space-y-3">
             <label
-              className="text-sm uppercase font-bold"
+              className="text-xs md:text-sm uppercase font-bold"
               htmlFor="currentPassword"
             >
               Contraseña Actual
@@ -67,8 +67,8 @@ export default function ChangePasswordView() {
               autoFocus
               className={
                 errors.currentPassword
-                  ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                  : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+                  ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                  : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
               }
               {...register("currentPassword", {
                 required: "La contraseña actual es obligatoria",
@@ -76,8 +76,8 @@ export default function ChangePasswordView() {
             />
           </div>
 
-          <div className="mb-5 space-y-3">
-            <label className="text-sm uppercase font-bold" htmlFor="password">
+          <div className="mb-5 space-y-2 md:space-y-3">
+            <label className="text-xs md:text-sm uppercase font-bold" htmlFor="password">
               Nueva Contraseña
             </label>
             <input
@@ -86,8 +86,8 @@ export default function ChangePasswordView() {
               placeholder="Nueva Contraseña..."
               className={
                 errors.password
-                  ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                  : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+                  ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                  : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
               }
               {...register("password", {
                 required: "La nueva contraseña es obligatoria",
@@ -98,10 +98,10 @@ export default function ChangePasswordView() {
               })}
             />
           </div>
-          <div className="mb-5 space-y-3">
+          <div className="mb-5 space-y-2 md:space-y-3">
             <label
               htmlFor="password_confirmation"
-              className="text-sm uppercase font-bold"
+              className="text-xs md:text-sm uppercase font-bold"
             >
               Repetir Contraseña
             </label>
@@ -112,8 +112,8 @@ export default function ChangePasswordView() {
               placeholder="Repetir Contraseña..."
               className={
                 errors.password_confirmation
-                  ? "w-full p-3 bg-white/70 border-red-400 rounded border outline-none"
-                  : "w-full p-3 bg-white/70 border border-slate-600 rounded"
+                  ? "w-full p-2 md:p-3 bg-white/70 border-red-400 rounded border outline-none text-sm md:text-base"
+                  : "w-full p-2 md:p-3 bg-white/70 border border-slate-600 rounded text-sm md:text-base"
               }
               {...register("password_confirmation", {
                 required: "Repetir contraseña es obligatorio",
@@ -126,7 +126,7 @@ export default function ChangePasswordView() {
           <input
             type="submit"
             value="Cambiar Contraseña"
-            className="bg-fuchsia-600 w-full p-3 text-white uppercase shadow-inner shadow-white/60 font-bold hover:bg-fuchsia-700 cursor-pointer transition-colors rounded"
+            className="bg-fuchsia-600 w-full p-2 md:p-3 text-white text-sm md:text-base lg:text-lg uppercase shadow-inner shadow-white/60 font-bold hover:bg-fuchsia-700 cursor-pointer transition-colors rounded"
           />
         </form>
       </div>
